@@ -33,7 +33,7 @@ function getGrid(num) {
             function getRandom(num) {
                 let random = Math.floor(Math.random() * num);
                 console.log(random);
-                switch (random) {
+                switch (10) {
                 case 0: 
                  block.style.backgroundColor = "#e81416";
                  break;
@@ -64,14 +64,14 @@ function getGrid(num) {
             getRandom(8);
          
     
-        const sleep = async (milliseconds) => {
+       const sleep = async (milliseconds) => {
             await new Promise(resolve => {
                 return setTimeout(resolve, milliseconds)
             });
         };
         
         const testSleep = async () => {
-            await sleep(3000)
+            await sleep(500)
             block.style.backgroundColor = "white";
     
         }
@@ -81,7 +81,7 @@ function getGrid(num) {
     }));
     
 
-}
+};
 
 getGrid(16);
 
@@ -93,18 +93,30 @@ nuevo.addEventListener("click", function() {
     console.log(final)
 
 
-    if (final === "" || 45 < final) {
+    if (final === "" || 64 < final) {
         alert("Number is too large, please enter another.")
         return;
     } else {
 
         for (i = 0; final > i; i++) {
             const wrapper = document.querySelector("#wrapper");
-            let row = document.querySelectorAll(".row").forEach(row => row.remove());
+            const sleep = async (milliseconds) => {
+                await new Promise(resolve => {
+                    return setTimeout(resolve, milliseconds)
+                });
+            };
+            
+            const testSleep = async () => {
+                await sleep(1000)
+                let row = document.querySelectorAll(".row").forEach(row => row.remove());
             console.log("It worked");
             
        
-        getGrid(final);
+             getGrid(final);
+            }
+            
+            testSleep();
+            
         }
 
         
