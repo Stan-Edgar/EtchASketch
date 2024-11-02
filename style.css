@@ -14,7 +14,7 @@ body {
 }
 
 .W {
-    background-color: red;
+    background-color: lightblue;
     padding: 10px;
     border: solid black 2px;
     display: flex;
@@ -23,7 +23,7 @@ body {
 #wrapper {
     width: 450px;
     height: 450px;
-    background-color: orange;
+    background-color: blue;
 }
 
 
